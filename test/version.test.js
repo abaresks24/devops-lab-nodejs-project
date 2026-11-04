@@ -10,4 +10,9 @@ describe("GET /version", () => {
     expect(typeof res.body.version).toBe("string");
     expect(res.body.version.length).toBeGreaterThan(0);
   });
+
+  it("responds with JSON content-type", async () => {
+    const res = await request(app).get("/version");
+    expect(res.headers["content-type"]).toMatch(/application\/json/);
+  });
 });
