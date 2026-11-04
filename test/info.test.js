@@ -12,4 +12,10 @@ describe("GET /info", () => {
     expect(res.body).toHaveProperty("node");
     expect(res.body).toHaveProperty("uptime");
   });
+
+  it("has plausible node version & non-negative uptime", async () => {
+    const res = await request(app).get("/info");
+    expect(res.body.node).toMatch(/^v\d+\.\d+\.\d+/);
+    expect(res.body.uptime).toBeGreaterThanOrEqual(0);
+  });
 });

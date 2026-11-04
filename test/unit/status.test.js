@@ -24,4 +24,13 @@ describe("formatStatus", () => {
     expect(formatStatus(NaN)).toBe("warming-up");
     expect(formatStatus("abc")).toBe("warming-up");
   });
+
+  it("returns 'warming-up' for a negative uptime (-1)", () => {
+    // Real behaviour: -1 is a number < 60, so it falls in the first branch.
+    expect(formatStatus(-1)).toBe("warming-up");
+  });
+
+  it("returns 'warming-up' for a non-numeric input", () => {
+    expect(formatStatus("abc")).toBe("warming-up");
+  });
 });
