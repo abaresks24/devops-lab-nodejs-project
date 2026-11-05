@@ -1,8 +1,6 @@
 # Step 1 — PLAN (Jira Cloud)
 
-> This document is the deliverable for Step 1. The actual Jira project must be
-> created in your own Atlassian Cloud account (it can't be automated here), but
-> everything below is ready to copy-paste into Jira.
+> Plan de l'étape 1 du TP. Le projet Jira correspondant est sur https://arthur-devops-lab.atlassian.net (clé DEVOPS).
 
 ## 1. Create the Scrum project
 - https://www.atlassian.com/software/jira → **Software → Scrum → Create Project**
